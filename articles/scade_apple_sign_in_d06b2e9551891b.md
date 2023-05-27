@@ -35,4 +35,19 @@ Resources
 内容を簡単にまとめると、「サードパーティーのログインサービスを使うならAppleも入れないとリリースさせないぞ」ということです．
 そのため現在開発中のアプリの Scade にAppleでのサインイン機能を追加しました．
 
+# 前提
+これまで firebase Auth を用いてGoogleアカウントでログインできるようになっていました．
+また、マイページや Scade と呼ばれるユーザーに投稿された音声の一覧などでユーザーのプロフィール画像、表示名を取得して表示しています．
+
+| ログイン画面 | マイページ | Scade |
+| --- | --- | --- |
+| ![](https://storage.googleapis.com/zenn-user-upload/eb04cd6d0ab3-20230525.jpeg) | ![](https://storage.googleapis.com/zenn-user-upload/f179ba5dc9a0-20230525.jpeg) | ![](https://storage.googleapis.com/zenn-user-upload/8164ed21ff54-20230525.jpeg) |
+
+# 方針
+こちらのパッケージを使用しました．
+https://pub.dev/packages/sign_in_with_apple
+
+また、ボタンのUIを簡単に統一するため、こちらのパッケージを使用しました．
+https://pub.dev/packages/flutter_signin_button
+
 
