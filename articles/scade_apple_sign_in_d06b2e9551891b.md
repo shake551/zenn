@@ -2,8 +2,9 @@
 title: "Apple IDでサインインできないからリジェクトされた話"
 emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["flutter"]
+topics: ["flutter", "ios"]
 published: false
+publication_name: "n_thy"
 ---
 
 # はじめに
@@ -119,8 +120,7 @@ SignInWithApple ではユーザーのプロフィール画像を取得するこ�
 | --- | --- | --- |
 | ![](https://storage.googleapis.com/zenn-user-upload/4453e28c60a2-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/de02a6165ed7-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/089a5468aa23-20230621.png) |
 
-あとはアプリを起動して、SignInWithApple のボタンを押すだけです．
-Scade では以下のような流れでサインインできます．
+あとはアプリを起動して、SignInWithApple のボタンを押すだけです．Scade では以下のような流れでサインインできます．
 
 | Sign in ページ | Apple ID の選択ページ | パスワード入力 | Scade のマイページ |
 | --- | --- | --- | --- |
@@ -140,5 +140,4 @@ https://pub.dev/packages/flutter_signin_button
 
 # 最後に
 最後までお読みいただきありがとうございました．
-今回は SignInWithApple の実装方法についてご紹介しました．
-使用したパッケージの README を読めば思っていたよりも簡単に実現できたかなと思います．
+今回は SignInWithApple の実装方法についてご紹介しました．使用したパッケージの README を読めば思っていたよりも簡単に実現できたかなと思います．
