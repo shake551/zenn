@@ -135,3 +135,20 @@ Scade では以下のような流れでサインインできます．
 | Sign in ページ | Apple ID の選択ページ | パスワード入力 | Scade のマイページ |
 | --- | --- | --- | --- |
 | ![](https://storage.googleapis.com/zenn-user-upload/dd2ab8a5c2cc-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/4c27398221cb-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/0dd484f06d95-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/9297da9168fa-20230621.png) |
+
+# 困ったこと
+余談なのですが、サインインボタンを作成する際に少し困ったことがあったので紹介します．
+
+はじめはログインボタンの UI を簡単に統一できると思い以下のパッケージを導入しました．
+https://pub.dev/packages/flutter_signin_button
+同時期に、利用規約やプライバシーポリシーに同意しないとサインインできないようにするという修正を行っていました．その際に、同意していないとボタンを非活性にしたかったのですが、上記のパッケージではデザインを変更することができませんでした．そのため、ボタンを自作することになりました．
+実際に完成した画像が以下になります．
+
+| 非活性時 | 活性時 |
+| --- | --- |
+| ![](https://storage.googleapis.com/zenn-user-upload/3e752f21ffc1-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/03e1136fcbb0-20230621.png) |
+
+# 最後に
+最後までお読みいただきありがとうございました．
+今回は SignInWithApple の実装方法についてご紹介しました．
+使用したパッケージの README を読めば思っていたよりも簡単に実現できたかなと思います．
