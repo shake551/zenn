@@ -117,3 +117,20 @@ SignInWithApple ではユーザーのプロフィール画像を取得するこ�
 そこでプロフィール画像が取得できなければデフォルトのアイコンを表示するようにするなどの変更も行いました．
 今後はプロフィール画像などを後から変更できるようにもしていきたいと思っています．
 
+# Simulator での Apple Sign In
+今回 Apple で SignIn できるようにする機能を作成するにあたって色々な記事を読みました．
+そこで、 Simulator では動作確認ができないという記事をよく見かけたのですが、 Simulator でもできたのでその方法を簡単に紹介します．
+
+まず、Simulator の「設定」から「Sign in to your iPhone」を選択します．
+すると、 Simulator の「設定画面」からサインインしたアカウントが確認できます．
+
+| 設定ページ | Sign in ページ | 確認画面 |
+| --- | --- | --- |
+| ![](https://storage.googleapis.com/zenn-user-upload/4453e28c60a2-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/de02a6165ed7-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/089a5468aa23-20230621.png) |
+
+あとはアプリを起動して、SignInWithApple のボタンを押すだけです．
+Scade では以下のような流れでサインインできます．
+
+| Sign in ページ | Apple ID の選択ページ | パスワード入力 | Scade のマイページ |
+| --- | --- | --- | --- |
+| ![](https://storage.googleapis.com/zenn-user-upload/dd2ab8a5c2cc-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/4c27398221cb-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/0dd484f06d95-20230621.png) | ![](https://storage.googleapis.com/zenn-user-upload/9297da9168fa-20230621.png) |
