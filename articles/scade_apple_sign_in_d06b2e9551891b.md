@@ -11,6 +11,7 @@ N-thy では Scade という音を録音しシェアしたり、マップ上に�
 https://apps.apple.com/jp/app/scade/id6448228456
 
 今回はこのアプリを審査に出した際に「 Apple ID でサインインできない」という理由でリジェクトされた話についての記事です．
+Apple ID でサインインできるようにする方法や、Simulator で SignInWithApple の動作確認を行う方法などについて紹介します．
 
 # 内容
 Apple Store の審査に出すと、以下のような内容が返ってきてリジェクトされました．
