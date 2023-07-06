@@ -3,7 +3,7 @@ title: "Apple IDでサインインできないからリジェクトされた話"
 emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["flutter", "ios"]
-published: false
+published: true
 publication_name: "n_thy"
 ---
 
