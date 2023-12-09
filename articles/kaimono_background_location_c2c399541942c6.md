@@ -33,13 +33,14 @@ https://developer.apple.com/documentation/uikit/app_and_environment/managing_you
 # 位置情報の変更を監視する方法
 位置情報の変更を監視する方法についてはFlutterのpackageを探しましたが、あまり更新されていないようなものが多かったこと、アプリがkillされた状態で動作するものがなさそうだったことからこの部分だけSwiftで書くことにしました．
 
-具体的にはCore Location を使用します．
+Core Location を使用します．
 Core Location を使うことで、デバイスの位置情報などを取得することができます．より詳細な情報は以下のドキュメントにあります．
 https://developer.apple.com/documentation/coreLocation
 
 Core Locationサービスを設定・開始・停止する CLLocationManagerのオブジェクトはいくつかのロケーション関連のアクティビティをサポートしますが、今回は significant-change location service を使用しました．
 significant-change location serviceは文字通り、重大な位置情報の変更を検知し、通知してくれます．
-CLLocationManagerのdistanceFilterというプロパティで更新イベントが発生する最小の移動距離を設定することができるのですが、significant-change location serviceではdistanceFilterは関係なく更新イベントが生成されます．
+`startMonitoringSignificantLocationChanges()` を呼ぶことで位置情報の監視を始めることができ、アプリがどのような状態でも位置情報の変更を受け取ることができます．
+CLLocationManagerのdistanceFilterというプロパティで更新イベントが発生する最小の移動距離を設定することができるのですが、significant-change location serviceではdistanceFilterには依存せずに更新イベントが生成されます．
 
 # 位置情報の変更を監視する
 まず、全体像は以下のようになっています．
@@ -130,7 +131,7 @@ import CoreLocation
 
 # まとめ
 アプリが起動していない状態でも位置情報の更新を取得する方法として、significant-change location serviceを使う方法をご紹介しました．
-ご紹介したようにアプリが起動していなくても簡単に位置情報の更新を取得することができますが、この方法だと精度に問題があります．更新を受け取る間隔をこちらから指定することはできず、明確な基準も示されていません．（一応ログなどで確認したところ約500mおきに更新されているようでしたが、環境依存の可能性があります）そのため、もう少し精度よく取れるような方法を模索していきたいと思います．
+アプリが起動していなくても簡単に位置情報の更新を取得することができますが、この方法だと精度に問題があります．更新を受け取る間隔をこちらから指定することはできず、明確な基準も示されていません．（一応ログなどで確認したところ約500mおきに更新されているようでしたが、環境依存の可能性が高いです）そのため、もう少し精度よく取れるような方法を模索していきたいと思います．
 今後の候補として、iOS17から追加されたCLLocationUpdateの `liveUpdates` や `CLBackgroundActivitySession` が挙げられます．
 詳細は以下のビデオで説明されているので興味がある方はそちらも確認してみてください．
 https://developer.apple.com/videos/play/wwdc2023/10180/
