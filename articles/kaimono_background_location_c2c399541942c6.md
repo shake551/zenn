@@ -6,6 +6,12 @@ topics: ["Flutter", "iOS", "Dart", "Swift", "個人開発"]
 published: false
 ---
 
+:::message
+この記事は DeNA 24 新卒 Advent Calendar 2023 の10日目の記事です🎉
+:::
+
+https://qiita.com/advent-calendar/2023/dena-24-newgrad
+
 # はじめに
 個人開発でFlutterを使って「Kaimono」というiOSアプリを作っています．
 https://apps.apple.com/jp/app/kaimono-%E5%BF%98%E3%82%8C%E3%81%95%E3%81%9B%E3%81%AA%E3%81%84%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id6470928346
