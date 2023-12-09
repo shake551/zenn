@@ -3,7 +3,7 @@ title: "FlutterのiOSアプリでアプリが起動していなくても位置�
 emoji: "🏃"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Flutter", "iOS", "Dart", "Swift", "個人開発"]
-published: false
+published: true
 ---
 
 :::message
