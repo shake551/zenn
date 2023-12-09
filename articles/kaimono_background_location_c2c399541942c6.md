@@ -9,7 +9,7 @@ published: false
 # はじめに
 個人開発でFlutterを使って「Kaimono」というiOSアプリを作っています．
 https://apps.apple.com/jp/app/kaimono-%E5%BF%98%E3%82%8C%E3%81%95%E3%81%9B%E3%81%AA%E3%81%84%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id6470928346
-このアプリではアプリが起動していなくても位置情報を取得して登録している場所に近づくと通知を送信するという機能があります．
+このアプリでは位置情報を監視して、登録している場所に近づくと通知を送信するという機能があります．
 今回この機能を実現するために必要だった、iOSでのアプリが起動していない状態での位置情報の更新を取得する方法についてまとめようと思います．
 
 # 前提
@@ -122,7 +122,7 @@ import CoreLocation
 ```
 この `locations` には複数のlocationが含まれることがあり、最新のlocationは配列の末尾にあります．
 
-また、ドキュメントにもあるようにデリゲートオブジェクトは `locationManager(_:didUpdateLocations:)` を実装することに加えてエラーハンドリングをするために `locationManager(_:didFailWithError:)` も実装する必要があります．
+また、ドキュメントにもあるようにデリゲートオブジェクトは `locationManager(_:didUpdateLocations:)` を実装することに加えて、エラーハンドリングをするために `locationManager(_:didFailWithError:)` も実装する必要があります．
 ```swift
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // エラーが発生した際に実行したい処理
@@ -136,4 +136,4 @@ import CoreLocation
 詳細は以下のビデオで説明されているので興味がある方はそちらも確認してみてください．
 https://developer.apple.com/videos/play/wwdc2023/10180/
 
-最後までご覧いただきありがとうございました．
+最後までご覧いただきありがとうございました！
